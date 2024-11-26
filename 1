@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+  <style>
+	  body {
+			background: #101010;
+		  color: #ff2535;
+		  font-size: 3em;
+		  font-family: sans-serif;
+		  display: flexbox;
+		  justify-content: center; /* Center horizontally */
+			align-items: center; /* Center vertically */
+		}
+
+		div {
+		  display: flex;
+		  justify-content: center;
+		}
+
+		.div1 {
+		  height: 100%;
+		  margin: 10px;
+		}
+
+		p {
+		  margin-top: 100px;
+		  text-align: center;
+		  padding-bottom: 25px;
+		}
+		
+		.div2 {
+		  height: 100%;
+		  margin: 10px;
+		}
+		
+		button {
+		  margin-bottom: 100px;
+		  padding-top: 25px;
+		  border-radius: 50px;
+		  background-image: 
+		}
+		
+		.svg-button {
+		  background: none;
+		  border: none;
+		  cursor: pointer;
+		  fill: lightgrey; 
+		}
+		
+		.svg-button:hover {
+		  fill: #ff2535;
+		}
+		
+  </style>
+</head>
+<body>
+  <div class='div1'>
+    <p id='quote'></p>
+  </div>
+  <div class='div2'>
+    <button aria-label="Like" class="svg-button" id="quoteButton">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+      </svg>
+    </button>
+</div>
+
+  <script>
+  
+	  const quotes = () => {
+		  const number = Math.floor(Math.random() * 5);
+		  switch (number) {
+		    case 0:
+	      return 'ik zie je graag';
+	    case 1:
+	      return 'ik zie je graag';
+	    case 2:
+		      return 'ik ben trots op jou';
+	    case 3:
+	      return 'you are everything';
+	    case 4:
+	      return 'i wanna be between your legs';
+	    default:
+	      return 'HI BABY';
+		  }
+		}
+		document.getElementById('quoteButton').addEventListener('click', function() {
+		  document.getElementById('quote').innerText = quotes();
+	});
+  
+  </script>
+</body>
+</html>
