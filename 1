@@ -4,54 +4,56 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" >
   <link href="style.css" rel="stylesheet">
   <style>
-	  body {
-			background: #101010;
-		  color: #ff2535;
-		  font-size: 3em;
-		  font-family: sans-serif;
-		  display: flexbox;
-		  justify-content: center; /* Center horizontally */
-			align-items: center; /* Center vertically */
-		}
-
-		div {
-		  display: flex;
-		  justify-content: center;
-		}
-
-		.div1 {
-		  height: 100%;
-		  margin: 10px;
-		}
-
-		p {
-		  margin-top: 100px;
-		  text-align: center;
-		  padding-bottom: 25px;
-		}
-		
-		.div2 {
-		  height: 100%;
-		  margin: 10px;
-		}
-		
-		button {
-		  margin-bottom: 100px;
-		  padding-top: 25px;
-		  border-radius: 50px;
-		  background-image: 
-		}
-		
-		.svg-button {
-		  background: none;
-		  border: none;
-		  cursor: pointer;
-		  fill: lightgrey; 
-		}
-		
-		.svg-button:hover {
-		  fill: #ff2535;
-		}
+	body {
+	  background: #101010;
+	  color: #ff2535;
+	  font-size: 3em;
+	  font-family: sans-serif;
+	  display: flexbox;
+	  justify-content: center; /* Center horizontally */
+	  align-items: center; /* Center vertically */
+	}
+	
+	div {
+	  display: flex;
+	  justify-content: center;
+	}
+	
+	.div1 {
+	  background-color: lightblue;
+	  height: 50%;
+	  margin: 10px;
+	}
+	
+	p {
+	  margin-top: 50px;
+	  text-align: center;
+	  padding-bottom: 15px;
+	}
+	
+	.div2 {
+	  background-color: lightcoral;
+	  height: 50%;
+	  margin: 10px;
+	}
+	
+	button{
+	  margin-bottom: 50px;
+	  padding-top: 15px;
+	  border-radius: 50px;
+	  background-image: 
+	}
+	
+	.svg-button {
+	  background: none;
+	  border: none;
+	  cursor: pointer;
+	  fill: lightgrey; 
+	}
+	
+	.svg-button:hover {
+	  fill: #ff2535;
+	}
 		
   </style>
 </head>
@@ -70,22 +72,22 @@
   <script>
   
 	  const quotes = () => {
-		  const number = Math.floor(Math.random() * 5);
+		const number = Math.floor(Math.random() * 5);
 		  switch (number) {
-		    case 0:
-	      return 'ik zie je graag';
-	    case 1:
-	      return 'ik zie je graag';
-	    case 2:
-		      return 'ik ben trots op jou';
-	    case 3:
-	      return 'you are everything';
-	    case 4:
-	      return 'i wanna be between your legs';
-	    default:
-	      return 'HI BABY';
-		  }
-		}
+			case 0:
+	      		return 'ik zie je graag';
+			case 1:
+	     		return 'ik zie je graag';
+	    		case 2:
+			return 'ik ben trots op jou';
+	    		case 3:
+			return 'you are everything';
+	    		case 4:
+	      		return 'you are ';
+	    		default:
+	      		return 'HI BABY';
+		  	}
+			}
 		document.getElementById('quoteButton').addEventListener('click', function() {
 		  document.getElementById('quote').innerText = quotes();
 	});
